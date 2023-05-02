@@ -1,0 +1,77 @@
+@import '../../assets/styles/main';
+
+// Define styles for Header component
+.header {
+  height: $layout-header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  background-color: #fff;
+  color: #fff;
+
+  .logo {
+    height: 32px;
+    margin-right: 16px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+
+    .menu-item {
+      margin-left: 16px;
+    }
+
+    .menu-item:first-child {
+      margin-left: 0;
+    }
+
+    .menu-link {
+      color: #fff;
+
+      &:hover {
+        color: #1890ff;
+      }
+    }
+  }
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+
+  .header-logo {
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 16px 24px 16px 0;
+    float: left;
+  }
+
+  .header-desktop {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-right: 50px;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  .header-mobile-toggle {
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  .header-mobile {
+    width: 240px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+}

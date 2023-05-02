@@ -1,0 +1,38 @@
+@import '../../assets/styles/main';
+
+// Define styles for PageLayout component
+.page-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .ant-layout {
+    flex: 1;
+
+    .ant-layout-sider {
+      background-color: #f0f2f5;
+    }
+
+    .ant-layout-content {
+      margin: 24px;
+      overflow: initial;
+    }
+  }
+}
+
+// Define styles for Header component
+.header {
+  height: $layout-header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 0 24px;
+  border-bottom: 1px solid #f0f0f0;
+
+  .logo {
+    height: 32px;
+    margin-right: 16px;
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
