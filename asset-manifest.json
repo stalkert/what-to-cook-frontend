@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "/what-to-cook-frontend/static/css/main.eeb4ae37.css",
-    "main.js": "/what-to-cook-frontend/static/js/main.c268da60.js",
-    "static/media/logo.svg": "/what-to-cook-frontend/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.css": "/what-to-cook-frontend/static/css/main.30add873.css",
+    "main.js": "/what-to-cook-frontend/static/js/main.a250a981.js",
     "index.html": "/what-to-cook-frontend/index.html",
-    "main.eeb4ae37.css.map": "/what-to-cook-frontend/static/css/main.eeb4ae37.css.map",
-    "main.c268da60.js.map": "/what-to-cook-frontend/static/js/main.c268da60.js.map"
+    "main.30add873.css.map": "/what-to-cook-frontend/static/css/main.30add873.css.map",
+    "main.a250a981.js.map": "/what-to-cook-frontend/static/js/main.a250a981.js.map"
   },
   "entrypoints": [
-    "static/css/main.eeb4ae37.css",
-    "static/js/main.c268da60.js"
+    "static/css/main.30add873.css",
+    "static/js/main.a250a981.js"
   ]
 }
