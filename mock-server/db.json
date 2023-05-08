@@ -1,0 +1,22 @@
+{
+  "purchases": [
+    {
+      "id": 1,
+      "title": "Potato",
+      "isChecked": false,
+      "isSentToFridge": false
+    },
+    {
+      "id": 2,
+      "title": "Onion",
+      "isChecked": false,
+      "isSentToFridge": false
+    },
+    {
+      "id": 3,
+      "title": "Cheese",
+      "isChecked": false,
+      "isSentToFridge": false
+    }
+  ]
+}
