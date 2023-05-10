@@ -22,7 +22,7 @@ function getItem(
 }
 
 const items: MenuItem[] = [
-  getItem('Navigation One777', 'sub1', <MailOutlined />, [
+  getItem('Navigation 7', 'sub1', <MailOutlined />, [
     getItem('Item 1', null, null, [getItem('Option 1', '1'), getItem('Option 2', '2')], 'group'),
     getItem('Item 2', null, null, [getItem('Option 3', '3'), getItem('Option 4', '4')], 'group'),
   ]),
