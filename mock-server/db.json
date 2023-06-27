@@ -1,4 +1,7 @@
 {
+  "login": {
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJpZCI6MSwiZW1haWwiOiJzdXBlci5hZG1pbkBnbWFpbC5jb20iLCJ1c2VybmFtZSI6IlN1cGVyIEFkbWluIiwiZXhwIjoyNjgzNTAyNzUwLCJpYXQiOjE2ODM1MDA5NTB9.M9q4ztEg3vkjcgIHu3R0uwimk_zJ9lLbgOVeCtU7GE_rAJsbq_Ca6xnjscRfVkp_i2NZ-oyRljEopnNV8_GL9g"
+  },
   "purchases": [
     {
       "id": 1,

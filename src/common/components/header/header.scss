@@ -1,6 +1,5 @@
 @import '../../assets/styles/main';
 
-// Define styles for Header component
 .header {
   height: $layout-header-height;
   display: flex;
@@ -37,6 +36,7 @@
     }
   }
 }
+
 .header {
   display: flex;
   align-items: center;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Menu } from 'antd';
+import { Layout } from 'antd';
 import './sidebar.scss';
 import MainMenu from '../main-menu/main-menu';
 

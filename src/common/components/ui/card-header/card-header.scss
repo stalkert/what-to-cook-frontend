@@ -1,0 +1,15 @@
+.card-header {
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__back-btn {
+    padding-right: 20px;
+  }
+
+  &__buttons {
+    margin-left: auto;
+  }
+}

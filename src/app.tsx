@@ -1,21 +1,31 @@
 import Menu from 'antd/es/menu';
-import React from 'react';
+import React, { FC } from 'react';
 import PageLayout from './common/components/page-layout/page-layout';
+import { Route, Routes } from 'react-router-dom';
+import { routes } from './core/routes';
+import { PrivateRoute } from './features/auth/components/private-route/private-route.component';
 
-export const menuItems = (
-  <>
-    <Menu.Item key="1">Option 1</Menu.Item>
-    <Menu.Item key="2">Option 2</Menu.Item>
-    <Menu.Item key="3">Option 3</Menu.Item>
-  </>
-);
+interface AppProps {}
 
-const App: React.FC = () => {
+export const App: FC<AppProps> = () => {
   return (
-    <PageLayout>
-      <div>Main Content</div>
-    </PageLayout>
+    <>
+      <Routes>
+        {Object.values(routes).map((route) => {
+          if (route.private) {
+            return (
+              <Route
+                key={`route-${route.path}`}
+                path={route.path}
+                element={<PrivateRoute>{route.element}</PrivateRoute>}
+              />
+            );
+          }
+
+          return <Route key={`route-${route.path}`} path={route.path} element={route.element} />;
+        })}
+      </Routes>
+    </>
   );
 };
-
 export default App;

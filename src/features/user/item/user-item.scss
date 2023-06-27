@@ -1,0 +1,16 @@
+.user-info {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+
+  &__avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
