@@ -9,9 +9,11 @@ export enum ButtonType {
 }
 export interface UiButton {
   buttonTitle: string;
-  callback: () => void;
+  callback: (params?: any) => any;
   danger?: boolean;
   buttonType?: ButtonType;
+  isVisible?: boolean;
+  disabled?: boolean;
 }
 
 interface CardTitleProps {
@@ -32,9 +34,9 @@ const CardHeader: React.FC<CardTitleProps> = ({ title, isBackBtnVisible = true, 
       <h4 className="card-header__title">{title}</h4>
 
       <div className="card-header__buttons">
-        {buttons?.map(({ danger, buttonTitle, callback }: UiButton) => {
+        {buttons?.map(({ danger, buttonTitle, callback, disabled }: UiButton) => {
           return (
-            <Button key={buttonTitle} danger={danger} onClick={callback}>
+            <Button key={buttonTitle} disabled={disabled} danger={danger} onClick={callback}>
               {buttonTitle}
             </Button>
           );

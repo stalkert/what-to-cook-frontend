@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { UsergroupAddOutlined } from '@ant-design/icons';
+import { FileTextOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Menu } from 'antd';
 import { useNavigate } from 'react-router-dom';
+import { Role } from '../../enums/role.enum';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
@@ -10,19 +11,22 @@ function getItem(
   label: React.ReactNode,
   key?: React.Key | null,
   icon?: React.ReactNode,
+  roles?: Role[],
   children?: MenuItem[],
   type?: 'group',
 ): MenuItem {
   return {
     key,
     icon,
+    roles,
     children,
     label,
     type,
   } as MenuItem;
 }
 
-const items: MenuItem[] = [getItem('Users', 'users', <UsergroupAddOutlined />)];
+const items: MenuItem[] = [getItem('Goods', 'goods', <FileTextOutlined />, [Role.Admin, Role.SuperAdmin])];
+
 export interface MainMenuProps {
   toggleDrawer?: () => void;
 }

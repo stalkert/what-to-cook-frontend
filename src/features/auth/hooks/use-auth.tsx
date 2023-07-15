@@ -1,12 +1,9 @@
 import { useLazySignInQuery } from '../api/repository';
-import { isLoggedIn } from '../tools/auth-tools';
 import { SignInFormValues } from '../api/models/auth.model';
 import jwt_decode from 'jwt-decode';
 import { toast } from 'react-toastify';
 
 export const useAuth = () => {
-  const isUserLoggedIn = isLoggedIn();
-
   const [triggerSignInQuery] = useLazySignInQuery();
   const signIn = async (values: SignInFormValues) => {
     let token: string;
@@ -35,5 +32,5 @@ export const useAuth = () => {
     localStorage.removeItem('token');
   };
 
-  return { isUserLoggedIn, signIn, signOut };
+  return { signIn, signOut };
 };

@@ -1,6 +1,8 @@
 import SignInPage from '../features/auth/components/sign-in-page/sign-in-page';
 import PageLayout from '../common/components/page-layout/page-layout';
 import SignUpPage from '../features/auth/components/sign-up-page/sign-up-page';
+import GoodList from '../features/goods/list/good-list';
+import GoodItem from '../features/goods/item/good-item';
 
 interface RouteItem {
   path: string;
@@ -23,5 +25,32 @@ export const routes: Record<string, RouteItem> = {
     path: '/sign-up',
     element: <SignUpPage />,
     private: false,
+  },
+  goods: {
+    path: '/goods',
+    element: (
+      <PageLayout>
+        <GoodList />
+      </PageLayout>
+    ),
+    private: true,
+  },
+  good: {
+    path: '/goods/:goodId',
+    element: (
+      <PageLayout>
+        <GoodItem />
+      </PageLayout>
+    ),
+    private: true,
+  },
+  goodCreate: {
+    path: '/goods/create',
+    element: (
+      <PageLayout>
+        <GoodItem />
+      </PageLayout>
+    ),
+    private: true,
   },
 };

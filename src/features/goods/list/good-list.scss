@@ -1,0 +1,19 @@
+.good-list {
+  .ant-table-row {
+    cursor: pointer;
+  }
+  &__toolbar {
+    display: flex;
+  }
+
+  &__search {
+    margin-bottom: 2em;
+    margin-right: auto;
+  }
+
+  .name {
+    &__column {
+      text-transform: capitalize;
+    }
+  }
+}

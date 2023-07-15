@@ -21,13 +21,21 @@ const SignUpPage: React.FC = () => {
   };
 
   useEffect(() => {
-    if (isSuccessUserCreation) {
+    const onSuccessUserCreation = () => {
       toast.success(`Account successfully created! Please login with your credentials.`);
       navigate('/sign-in');
-    }
-    if (isErrorUserCreation) {
+    };
+
+    const onErrorUserCreation = () => {
       // @ts-ignore
       toast.error(error.data.message || "Something wen't wrong. Please, try again later");
+    };
+
+    if (isSuccessUserCreation) {
+      onSuccessUserCreation();
+    }
+    if (isErrorUserCreation) {
+      onErrorUserCreation();
     }
   }, [isSuccessUserCreation, isErrorUserCreation]);
 
