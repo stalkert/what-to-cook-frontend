@@ -67,5 +67,11 @@ export const goodApi = createApi({
   }),
 });
 
-export const { useGetGoodsQuery, useGetGoodQuery, useDeleteGoodMutation, useCreateGoodMutation, useEditGoodMutation } =
-  goodApi;
+export const {
+  useGetGoodsQuery,
+  useLazyGetGoodsQuery,
+  useGetGoodQuery,
+  useDeleteGoodMutation,
+  useCreateGoodMutation,
+  useEditGoodMutation,
+} = goodApi;

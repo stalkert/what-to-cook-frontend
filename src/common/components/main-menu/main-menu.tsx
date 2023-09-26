@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FileTextOutlined } from '@ant-design/icons';
+import { FileTextOutlined, UnorderedListOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Menu } from 'antd';
 import { useNavigate } from 'react-router-dom';
@@ -25,7 +25,10 @@ function getItem(
   } as MenuItem;
 }
 
-const items: MenuItem[] = [getItem('Goods', 'goods', <FileTextOutlined />, [Role.Admin, Role.SuperAdmin])];
+const items: MenuItem[] = [
+  getItem('Goods', 'goods', <FileTextOutlined />, [Role.Admin, Role.SuperAdmin]),
+  getItem('Purchases', 'purchases', <UnorderedListOutlined />, [Role.Admin, Role.SuperAdmin, Role.User]),
+];
 
 export interface MainMenuProps {
   toggleDrawer?: () => void;

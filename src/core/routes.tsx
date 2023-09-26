@@ -3,6 +3,7 @@ import PageLayout from '../common/components/page-layout/page-layout';
 import SignUpPage from '../features/auth/components/sign-up-page/sign-up-page';
 import GoodList from '../features/goods/list/good-list';
 import GoodItem from '../features/goods/item/good-item';
+import PurchaseList from '../features/purchases/list/purchase-list';
 
 interface RouteItem {
   path: string;
@@ -49,6 +50,15 @@ export const routes: Record<string, RouteItem> = {
     element: (
       <PageLayout>
         <GoodItem />
+      </PageLayout>
+    ),
+    private: true,
+  },
+  purchaseList: {
+    path: '/purchases',
+    element: (
+      <PageLayout>
+        <PurchaseList />
       </PageLayout>
     ),
     private: true,
