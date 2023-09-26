@@ -1,13 +1,13 @@
 import { createApi } from '@reduxjs/toolkit/query/react';
 import { baseQuery } from '../../../core/api/base-query';
-import { Purchase } from './models/purchase.model';
+import { Purchase, PurchaseGoodItem } from './models/purchase.model';
 
 export const purchaseApi = createApi({
   reducerPath: 'purchaseApi',
   baseQuery: baseQuery,
   tagTypes: ['PurchaseList'],
   endpoints: (build) => ({
-    getPurchaseList: build.query<Purchase[], void>({
+    getPurchaseList: build.query<PurchaseGoodItem[], void>({
       keepUnusedDataFor: 1,
       query: () => {
         return {
